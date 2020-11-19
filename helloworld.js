@@ -1,3 +1,9 @@
+function beyanAramaSayfasindaUyar(){
+
+	alert('beyan arama sayfası');
+	
+}
+
 var oldHref = document.location.href;
 
 		console.log(oldHref)
@@ -16,6 +22,12 @@ var oldHref = document.location.href;
 							oldHref = document.location.href;
 
 							console.log(oldHref)
+							
+							if (oldHref.includes('beyan')){
+								beyanAramaSayfasindaUyar();
+							}
+							
+							
 
 						}
 
@@ -31,3 +43,6 @@ var oldHref = document.location.href;
 			observer.observe(bodyList, config);
 
 		};
+
+
+
