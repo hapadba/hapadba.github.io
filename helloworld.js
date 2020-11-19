@@ -1,5 +1,5 @@
 function myFunc(){
-  alert('hello world');
+  location.href='/'
 }
 
 myFunc();
