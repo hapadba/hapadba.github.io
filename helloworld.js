@@ -1,6 +1,6 @@
 function beyanAramaSayfasindaUyar(){
 
-	alert('beyan arama sayfası');
+	alert('beyan arama sayfasındasınız');
 	
 }
 
