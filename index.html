@@ -58,9 +58,10 @@
         NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload);
 
         if(enableForegroundNotification) {
-            const {title, ...options} = JSON.parse(payload.notification);
+            // const {title, ...options} = JSON.parse(payload.notification);
             navigator.serviceWorker.getRegistrations().then(registration => {
-                registration[0].showNotification(title, options);
+                // registration[0].showNotification(title, options);
+                registration[0].showNotification(payload.notification.title);
             });
         }
     });
