@@ -61,7 +61,14 @@
             // const {title, ...options} = JSON.parse(payload.notification);
             navigator.serviceWorker.getRegistrations().then(registration => {
                 // registration[0].showNotification(title, options);
-                registration[0].showNotification(payload.notification.title);
+
+                const notificationTitle = payload.notification.title;
+                const notificationOptions = {
+                    body: payload.notification.body,
+                    icon: '/firebase-logo.png'
+                };
+
+                registration[0].showNotification(notificationTitle,notificationOptions);
             });
         }
     });
