@@ -37,6 +37,9 @@
     firebase.initializeApp(firebaseConfig);
 
     const messaging = firebase.messaging();
+
+    console.log(messaging.isSupported())
+
     messaging
         .requestPermission()
         .then(function () {
