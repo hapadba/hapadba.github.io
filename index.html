@@ -31,6 +31,8 @@
 
     console.log("firebase.initializeApp")
 
+    console.log(firebase)
+
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
@@ -41,6 +43,7 @@
             MsgElem.innerHTML = "Notification permission granted."
             console.log("Notification permission granted.");
 
+            //messaging.getToken({vapidKey: "BKagOny0KF_2pCJQ3m....moL0ewzQ8rZu"});
             // get the token in the form of promise
             return messaging.getToken()
         })
